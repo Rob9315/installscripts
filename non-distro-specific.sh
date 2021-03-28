@@ -5,11 +5,11 @@
 prechosen_or_prompted_command() {
   while [ -z "${!1}" ]
   do
-    read -p "Do you want to install '$2'?$4" yn
+    read -p "Do you want to install '$2'?$4 (Y|N) " yn
     case $yn in
       [Yy]*) declare "$1"="1";;
       [Nn]*) declare "$1"="0";;
-      *) echo "Please answer yes or no.";;
+      *) echo -e "";;
     esac
   done
   if [ ${!1} -eq 1 ]
