@@ -1,4 +1,7 @@
 #!/bin/sh
+# CURL COMMAND
+# sh -c "$(curl "https://raw.githubusercontent.com/rob9315/installscripts/master/ezauto.sh")"
+
 read -p "Please enter the installscript name (without .sh): " distroname
 read -n 1 -p "Do you want to use the program defaults? (y|N)" yn
 case $yn in
