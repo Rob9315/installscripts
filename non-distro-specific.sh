@@ -5,7 +5,7 @@
 prechosen_or_prompted_command() {
   while [ -z "${!1}" ]
   do
-    read -p "Do you want to install '$2'?$4 (Y|N) " yn
+    read -n 1 -p "Do you want to install '$2'?$4 (Y|N) " yn
     case $yn in
       [Yy]*) declare "$1"="1";;
       [Nn]*) declare "$1"="0";;
