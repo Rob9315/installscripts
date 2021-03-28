@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # CURL COMMAND:
-# curl "https://raw.githubusercontent.com/Rob9315/installscripts/master/fedora.sh" | sh
+# sh -c "$(curl "https://raw.githubusercontent.com/Rob9315/installscripts/master/fedora.sh")"
 
 # do updates
 sudo dnf update -y
