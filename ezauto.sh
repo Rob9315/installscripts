@@ -10,6 +10,6 @@ case $yn in
 esac
 if [ $yn -eq 1 ]
 then
-  sh -c "$(curl "https://raw.githubusercontent.com/Rob9315/installscripts/master/defaults.sh")"
+  $(curl "https://raw.githubusercontent.com/Rob9315/installscripts/master/defaults.sh")
 fi
 sh -c "$(curl "https://raw.githubusercontent.com/Rob9315/installscripts/master/$distroname.sh")"
