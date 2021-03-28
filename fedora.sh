@@ -26,4 +26,4 @@ sudo dnf check-update -y
 sudo dnf install gnome-tweaks gnome-extensions-app code-insiders go npm brave-browser lpf-spotify-client discord papirus-icon-theme sassc -y
 
 # launch other scripts
-curl "https://raw.githubusercontent.com/Rob9315/installscripts/master/non-distro-specific.sh" | sh
+sh -c "$(curl "https://raw.githubusercontent.com/Rob9315/installscripts/master/non-distro-specific.sh")"
