@@ -23,7 +23,7 @@ sudo sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.m
 sudo dnf check-update -y
 
 # install stuff
-sudo dnf install gnome-tweaks gnome-extensions-app code-insiders go npm brave-browser lpf-spotify-client papirus-icon-theme -y
+sudo dnf install gnome-tweaks gnome-extensions-app code-insiders go npm brave-browser lpf-spotify-client discord papirus-icon-theme -y
 
 # launch other scripts
 curl "https://raw.githubusercontent.com/Rob9315/installscripts/master/non-distro-specific.sh" | sh
