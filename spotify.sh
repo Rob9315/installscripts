@@ -32,5 +32,5 @@ echo "[Desktop Entry]
 Type=Application
 Name=Spotify (adblock-update)
 Icon=spotify-client
-Exec=curl \"https://raw.githubusercontent.com/Rob9315/installscripts/master/spotify.sh\" | sh
+Exec=sh -c 'curl \"https://raw.githubusercontent.com/Rob9315/installscripts/master/spotify.sh\" | sh'
 Terminal=true" >~/.local/share/applications/spotify-adblock-update.desktop
