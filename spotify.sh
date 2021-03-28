@@ -33,4 +33,4 @@ Type=Application
 Name=Spotify (adblock-update)
 Icon=spotify-client
 Exec=curl "https://raw.githubusercontent.com/rob9315/installscripts/spotify.sh" | sh
-Terminal=true"
+Terminal=true"> ~/.local/share/applications/spotify-adblock-update.desktop
