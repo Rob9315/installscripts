@@ -1,5 +1,6 @@
 #!/bin/sh
 # only launch this after you have read what it does or have it launch from a different script
+# sh -c "$(curl "https://raw.githubusercontent.com/Rob9315/installscripts/master/non-distro-specific.sh")"
 
 prechosen_or_prompted_command() {
   while [ -z "${!1}" ]
