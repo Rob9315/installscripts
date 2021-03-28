@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #go to tmp, clone adblock and cd into adblock repo
-cd /tmp 
+cd /tmp
 git clone https://github.com/abba23/spotify-adblock-linux.git
 cd spotify-adblock-linux
 
@@ -24,7 +24,7 @@ Exec=env LD_PRELOAD=/usr/local/lib/spotify-adblock.so spotify %U
 Terminal=false
 MimeType=x-scheme-handler/spotify;
 Categories=Audio;Music;Player;AudioVideo;
-StartupWMClass=spotify" > ~/.local/share/applications/spotify-adblock.desktop
+StartupWMClass=spotify" >~/.local/share/applications/spotify-adblock.desktop
 
 # create .desktop file for updates
 touch ~/.local/share/applications/spotify-adblock-update.desktop
@@ -33,4 +33,4 @@ Type=Application
 Name=Spotify (adblock-update)
 Icon=spotify-client
 Exec=curl "https://raw.githubusercontent.com/rob9315/installscripts/spotify.sh" | sh
-Terminal=true"> ~/.local/share/applications/spotify-adblock-update.desktop
+Terminal=true" >~/.local/share/applications/spotify-adblock-update.desktop
