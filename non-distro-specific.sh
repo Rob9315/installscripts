@@ -22,7 +22,7 @@ prechosen_or_prompted_command() {
 prechosen_or_prompted_command "spotify" "Spotify (adblock)" "$(curl "https://raw.githubusercontent.com/Rob9315/installscripts/master/spotify.sh")"
 prechosen_or_prompted_command "shell" "Shell" "$(curl "https://raw.githubusercontent.com/Rob9315/installscripts/master/shell.sh")"
 echo -e "shell=$shell"
-if [ "$shell"="1" ] ; then 
+if [ ! "$shell"="0" ] ; then 
   export termfont='MesloLGS NF'
   $(read -p "termfont=$termfont")
 fi
