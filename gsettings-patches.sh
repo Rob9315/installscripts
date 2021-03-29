@@ -2,7 +2,7 @@
 # set terminal font if not already set
 if [ -z $termfont ]
 then
-  termfont="Monospace"
+  termfont="MesloLGS NF"
 fi
 # get active profile id
 term_active_profile=$(gsettings get org.gnome.Terminal.ProfilesList default)
