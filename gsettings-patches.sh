@@ -1,6 +1,6 @@
 #!/bin/sh
 # set terminal font if not already set
-while [ -z $termfont ]
+while [ -z "$termfont" ]
 do
   read -p "Please input your preferred Terminal Font (when in doubt, pick Monospace): " termfont
 done
