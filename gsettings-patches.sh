@@ -10,8 +10,8 @@ term_active_profile=${term_active_profile:1:-1}
 
 # terminal settings
 echo -e
-echo -e "$termfont 10\""
-echo -e "$(gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:$term_active_profile/ font "$termfont 11")"
+echo -e \'$termfont 10\'
+echo -e "$(gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:$term_active_profile/ font \'$termfont 11\')"
 gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:$term_active_profile/ font "$termfont 11"
 gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:$term_active_profile/ use-system-font false
 gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:$term_active_profile/ use-theme-colors true
