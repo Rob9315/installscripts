@@ -19,7 +19,7 @@ prechosen_or_prompted_command() {
 }
 
 prechosen_or_prompted_command "spotify" "Spotify (adblock)" "curl \"https://raw.githubusercontent.com/Rob9315/installscripts/master/spotify.sh\""
-prechosen_or_prompted_command "shell" "Shell" "curl \"https://raw.githubusercontent.com/Rob9315/installscripts/master/shell.sh\" && export termfont='MesloLGS NF'"
+prechosen_or_prompted_command "shell" "Shell" "curl \"https://raw.githubusercontent.com/Rob9315/installscripts/master/shell.sh\""
 prechosen_or_prompted_command "gsettings" "Patch some Gnome settings" "curl \"https://raw.githubusercontent.com/Rob9315/installscripts/master/gsettings-patches.sh\""
 # prechosen_or_prompted_command "git" "Set up Git" "curl \"https://raw.githubusercontent.com/Rob9315/installscripts/master/git.sh\" | sh"
 prechosen_or_prompted_command "gtktheme" "Matcherial Theme" "curl \"https://raw.githubusercontent.com/Rob9315/installscripts/master/gtktheme.sh\"" " (you will need to have sassc installed)"
