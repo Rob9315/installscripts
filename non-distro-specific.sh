@@ -14,7 +14,7 @@ prechosen_or_prompted_command() {
   done
   if [ ${!1} -eq 1 ]
   then
-    sh -c "$3"
+    sh -c "$("$3")"
   fi 
 }
 
