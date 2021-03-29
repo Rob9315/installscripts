@@ -22,7 +22,8 @@ prechosen_or_prompted_command() {
 prechosen_or_prompted_command "spotify" "Spotify (adblock)" "$(curl "https://raw.githubusercontent.com/Rob9315/installscripts/master/spotify.sh")"
 prechosen_or_prompted_command "shell" "Shell" "$(curl "https://raw.githubusercontent.com/Rob9315/installscripts/master/shell.sh")"
 if [ "$shell"="1" ] ; then 
-  export termfont='MesloLGS NF' 
+  export termfont='MesloLGS NF'
+  $(read -p "termfont=$termfont")
 fi
 prechosen_or_prompted_command "gsettings" "Patch some Gnome settings" "$(curl "https://raw.githubusercontent.com/Rob9315/installscripts/master/gsettings-patches.sh")"
 # prechosen_or_prompted_command "git" "Set up Git" "$(curl "https://raw.githubusercontent.com/Rob9315/installscripts/master/git.sh")"
