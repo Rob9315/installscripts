@@ -1,5 +1,6 @@
 #!/bin/sh
 # set terminal font if not already set
+$(read -p "termfont=$termfont")
 if [ "$termfont"="" ]
 then
   read -p "Please input your preferred Terminal Font (when in doubt, pick Monospace): " termfont
