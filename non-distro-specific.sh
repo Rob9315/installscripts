@@ -8,8 +8,8 @@ prechosen_or_prompted_command() {
   do
     read -n 1 -p "Do you want to install '$2'?$4 (Y|N) " yn
     case $yn in
-      [Yy]*) declare "$1"="1";;
-      [Nn]*) declare "$1"="0";;
+      [Yy]*) export $1="1";;
+      [Nn]*) export $1="0";;
       *) echo -e "";;
     esac
   done
