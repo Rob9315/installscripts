@@ -1,9 +1,9 @@
 #!/bin/sh
 # set terminal font if not already set
-while [ -z "$termfont" ]
-do
+if [ "$termfont"="" ]
+then
   read -p "Please input your preferred Terminal Font (when in doubt, pick Monospace): " termfont
-done
+fi
 # get active profile id
 term_active_profile=$(gsettings get org.gnome.Terminal.ProfilesList default)
 term_active_profile=${term_active_profile:1:-1}
