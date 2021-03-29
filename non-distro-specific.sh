@@ -16,7 +16,7 @@ prechosen_or_prompted_command() {
   if [ ${!1} -eq 1 ]
   then
     sh -c "$3"
-    $5
+    $($5)
   fi 
 }
 
