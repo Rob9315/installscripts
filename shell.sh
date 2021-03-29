@@ -5,6 +5,6 @@ sudo wget -N https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%
 fc-cache -f -v
 cd ~
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
-if ![[ grep -q 'source ~/powerlevel10k/powerlevel10k.zsh-theme' ~/.zshrc ]] ; then
+if ! grep -q 'source ~/powerlevel10k/powerlevel10k.zsh-theme' ~/.zshrc ; then
   echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
 fi
