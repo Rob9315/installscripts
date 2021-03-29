@@ -19,6 +19,7 @@ gsettings set org.gnome.desktop.peripherals.touchpad edge-scrolling-enabled fals
 gsettings set org.gnome.desktop.peripherals.touchpad send-events 'enabled'
 gsettings set org.gnome.desktop.peripherals.touchpad natural-scroll false
 gsettings set org.gnome.desktop.peripherals.touchpad tap-to-click true
+gsettings set org.gnome.desktop.peripherals.touchpad disable-while-typing false
 # mouse settings
 gsettings set org.gnome.desktop.peripherals.mouse natural-scroll false
 # shortcuts
