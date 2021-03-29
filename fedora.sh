@@ -21,9 +21,11 @@ sudo sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.m
 
 # refresh repos
 sudo dnf check-update -y
+You can see the difference between the stock Adwaita theme and the fork in this graphic:
+
 
 # install stuff
-sudo dnf install gnome-tweaks gnome-extensions-app code-insiders go npm brave-browser lpf-spotify-client discord papirus-icon-theme sassc zsh gawk youtube-dl ffmpeg -y
+sudo dnf install gnome-tweaks gnome-extensions-app code-insiders go npm brave-browser lpf-spotify-client discord papirus-icon-theme sassc zsh gawk youtube-dl -y
 
 # launch other scripts
 sh -c "$(curl "https://raw.githubusercontent.com/Rob9315/installscripts/master/non-distro-specific.sh")"
