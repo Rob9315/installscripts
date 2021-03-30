@@ -4,9 +4,9 @@
 
 [ -z "$tmppath" ] && eval "$(curl -s "https://raw.githubusercontent.com/Rob9315/installscripts/master/setdefaults.sh")"
 
-read -p "Please enter the installscript name (without .sh)"$'\n'"> " distroname
+read -p "Please enter the name of your distro (corresponding script's name)"$'\n'"> " distroname
 
-[ $(expr "$(read -n 1 -p "Choose defaults? (y|N)"$'\n')" : '[Yy]') = 1 ] && eval "$(curl "$rawfilesurl/yes.sh")"
+read -n 1 -p "Do you want to use the defaults? (y|N)"$'\n'"> " yn && echo "$yn" | grep -q "[Yy]" && echo -e "" && eval "$(curl "$rawfilesurl/yes.sh")"
 
 # start install script appropriate to distro
 sh -c "$(curl -s "$rawfilesurl/os/$distroname.sh")"
