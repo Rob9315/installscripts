@@ -32,4 +32,4 @@ sudo dnf install gnome-tweaks gnome-extensions-app code-insiders go npm brave-br
 sudo dnf remove gnome-shell-extension-background-logo
 
 # launch other scripts
-sh -c "$(curl -s "$tmppath/software.sh")"
+# sh -c "$(curl -s "$tmppath/software.sh")"

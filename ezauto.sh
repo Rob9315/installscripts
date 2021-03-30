@@ -8,4 +8,8 @@ read -p "Please enter the installscript name (without .sh)"$'\n'"> " distroname
 
 [ $(expr "$(read -n 1 -p "Choose defaults? (y|N)"$'\n')" : '[Yy]') = 1 ] && eval "$(curl "$rawfilesurl/yes.sh")"
 
-eval "$(curl -s "$rawfilesurl/os/$distroname.sh")"
+# start install script appropriate to distro
+sh -c "$(curl -s "$rawfilesurl/os/$distroname.sh")"
+
+# install software
+sh -c "$(curl -s "$tmppath/software.sh")"
