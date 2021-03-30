@@ -12,4 +12,4 @@ read -p "Please enter the installscript name (without .sh)"$'\n'"> " distroname
 sh -c "$(curl -s "$rawfilesurl/os/$distroname.sh")"
 
 # install software
-sh -c "$(curl -s "$tmppath/software.sh")"
+sh -c "$(curl -s "$rawfilesurl/software.sh")"
