@@ -1,7 +1,9 @@
 #!/bin/sh
 
+[ -z "$tmppath" ] && $(curl -s "https://raw.githubusercontent.com/Rob9315/installscripts/master/setdefaults.sh")
+
 #go to tmp, clone adblock and cd into adblock repo
-cd /tmp
+cd $tmpfolder
 git clone https://github.com/abba23/spotify-adblock-linux.git
 cd spotify-adblock-linux
 
@@ -37,5 +39,5 @@ echo "[Desktop Entry]
 Type=Application
 Name=Spotify (adblock-update)
 Icon=spotify-client
-Exec=sh -c 'curl \"https://raw.githubusercontent.com/Rob9315/installscripts/master/spotify.sh\" | sh'
+Exec=sh -c 'curl -s \"$rawfilesurl/software/spotify.sh\" | sh'
 Terminal=true" >~/.local/share/applications/spotify-adblock-update.desktop

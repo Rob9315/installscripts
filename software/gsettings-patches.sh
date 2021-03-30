@@ -1,10 +1,10 @@
 #!/bin/sh
+
+[ -z "$tmppath" ] && $(curl -s "https://raw.githubusercontent.com/Rob9315/installscripts/master/setdefaults.sh")
+
 # set terminal font if not already set
-echo -e "termfont=$termfont"
-if [ -z "$termfont" ]
-then
-  read -p "Please input your preferred Terminal Font (when in doubt, pick Monospace): " termfont
-fi
+[ -z "$termfont" ] && read -p "Please input your preferred Terminal Font (when in doubt, pick Monospace)"$'\n'"> " termfont
+
 # get active profile id
 term_active_profile=$(gsettings get org.gnome.Terminal.ProfilesList default)
 term_active_profile=${term_active_profile:1:-1}
@@ -25,5 +25,7 @@ gsettings set org.gnome.desktop.peripherals.mouse natural-scroll false
 # shortcuts
 gsettings set org.gnome.desktop.wm.keybindings switch-windows "['<Alt>Tab']"
 gsettings set org.gnome.desktop.wm.keybindings switch-windows-backward "['<Shift><Alt>Tab']"
-gsettings set org.gnome.desktop.wm.keybindings switch-applications "[]"
-gsettings set org.gnome.desktop.wm.keybindings switch-applications-backward "[]"
+gsettings set org.gnome.desktop.wm.keybindings switch-applications "['<Super>Tab']"
+gsettings set org.gnome.desktop.wm.keybindings switch-applications-backward "['<Shift><Super>Tab']"
+# disable hot corner
+gsettings set org.gnome.shell enable-hot-corners false
