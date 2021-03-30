@@ -1,4 +1,3 @@
-# watch out, 0 equals true here
 export spotify=0
 export shell=0
 export termfont="MeslogLGS NF"
