@@ -6,6 +6,6 @@
 
 read -p "Please enter the installscript name (without .sh)"$'\n'"> " distroname
 
-[ $(expr "$(read -n 1 -p "Choose defaults? (y|N)"$'\n')" : '[Yy]') = 1 ] && $(curl -s "$rawfilesurl/yes.sh")
+[ $(expr "$(read -n 1 -p "Choose defaults? (y|N)"$'\n')" : '[Yy]') -eq 1 ] && $(curl -s "$rawfilesurl/yes.sh")
 
 sh -c "$(curl -s "$rawfilesurl/os/$distroname.sh")"
