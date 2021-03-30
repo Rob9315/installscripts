@@ -1,6 +1,6 @@
 #!/bin/sh
 
-[ -z "$tmppath" ] && $(curl -s "https://raw.githubusercontent.com/Rob9315/installscripts/master/setdefaults.sh")
+[ -z "$tmppath" ] && eval "$(curl -s "https://raw.githubusercontent.com/Rob9315/installscripts/master/setdefaults.sh")"
 
 #go to tmp, clone adblock and cd into adblock repo
 cd $tmpfolder

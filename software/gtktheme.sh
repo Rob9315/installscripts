@@ -1,6 +1,6 @@
 #!/bin/sh
 
-[ -z "$tmppath" ] && $(curl -s "https://raw.githubusercontent.com/Rob9315/installscripts/master/setdefaults.sh")
+[ -z "$tmppath" ] && eval "$(curl -s "https://raw.githubusercontent.com/Rob9315/installscripts/master/setdefaults.sh")"
 
 mkdir -p "$tmppath/matcherial-gtk-theme"
 cd "$tmppath/matcherial-gtk-theme"

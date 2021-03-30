@@ -3,7 +3,7 @@
 # sh -c "$(curl "https://raw.githubusercontent.com/Rob9315/installscripts/master/os/fedora.sh")"
 # 
 
-[ -z "$tmppath" ] && $(curl -s "https://raw.githubusercontent.com/Rob9315/installscripts/master/setdefaults.sh")
+[ -z "$tmppath" ] && eval "$(curl -s "https://raw.githubusercontent.com/Rob9315/installscripts/master/setdefaults.sh")"
 
 # do updates
 sudo dnf update -y

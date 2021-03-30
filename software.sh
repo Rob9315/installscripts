@@ -2,7 +2,7 @@
 # only launch this after you have read what it does or have it launch from a different script
 # sh -c "$(curl "https://raw.githubusercontent.com/Rob9315/installscripts/master/software.sh")"
 
-[ -z "$tmppath" ] && $(curl -s "https://raw.githubusercontent.com/Rob9315/installscripts/master/setdefaults.sh")
+[ -z "$tmppath" ] && eval "$(curl -s "https://raw.githubusercontent.com/Rob9315/installscripts/master/setdefaults.sh")"
 
 promptyn "spotify" "Spotify (adblock)" "$(curl -s "$rawfilesurl/software/spotify.sh")"
 promptyn "shell" "Shell" "$(curl -s "$rawfilesurl/software/shell.sh")" # "" "export termfont='MesloLGS NF'"

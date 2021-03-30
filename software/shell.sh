@@ -1,6 +1,6 @@
 #!/bin/sh
 
-[ -z "$tmppath" ] && $(curl -s "https://raw.githubusercontent.com/Rob9315/installscripts/master/setdefaults.sh")
+[ -z "$tmppath" ] && eval "$(curl -s "https://raw.githubusercontent.com/Rob9315/installscripts/master/setdefaults.sh")"
 
 # change default shell
 sudo chsh --shell /bin/zsh $USER
