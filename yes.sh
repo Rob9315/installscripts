@@ -1,6 +1,7 @@
-export spotify=1
-export shell=1
+# watch out, 0 equals true here
+export spotify=0
+export shell=0
 export termfont="MeslogLGS NF"
-export gtktheme=1
-export git=1
-export gsettings=1
+export gtktheme=0
+export git=0
+export gsettings=0
