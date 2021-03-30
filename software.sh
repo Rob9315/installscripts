@@ -4,8 +4,8 @@
 
 [ -z "$tmppath" ] && eval "$(curl -s "https://raw.githubusercontent.com/Rob9315/installscripts/master/setdefaults.sh")"
 
-promptyn "spotify" "Spotify (adblock)" "$(curl -s "$rawfilesurl/software/spotify.sh")"
-promptyn "shell" "Shell" "$(curl -s "$rawfilesurl/software/shell.sh")" # "" "export termfont='MesloLGS NF'"
+$promptyn "spotify" "Spotify (adblock)" "$(curl -s "$rawfilesurl/software/spotify.sh")"
+$promptyn "shell" "Shell" "$(curl -s "$rawfilesurl/software/shell.sh")" # "" "export termfont='MesloLGS NF'"
 [ $shell -eq 1 ] && export termfont='MesloLGS NF'
-promptyn "gsettings" "Patch some Gnome settings" "$(curl -s "$rawfilesurl/software/gsettings-patches.sh")"
-promptyn "gtktheme" "Matcherial Theme" "$(curl -s "$rawfilesurl/software/gtktheme.sh")" " (you will need to have sassc installed)"
+$promptyn "gsettings" "Patch some Gnome settings" "$(curl -s "$rawfilesurl/software/gsettings-patches.sh")"
+$promptyn "gtktheme" "Matcherial Theme" "$(curl -s "$rawfilesurl/software/gtktheme.sh")" " (you will need to have sassc installed)"
