@@ -12,6 +12,9 @@ sudo wget -nc -P /usr/share/fonts \
   https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Italic.ttf \
   https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold%20Italic.ttf
 
+# reload font cache if not already exists
+fc-list | grep "MesloLGS NF" || fc-cache -f -v
+
 # install powerlevel10k
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k || git -C ~/powerlevel10k pull -f
 grep -q 'source ~/powerlevel10k/powerlevel10k.zsh-theme' ~/.zshrc && echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
