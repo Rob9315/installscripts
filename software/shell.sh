@@ -16,6 +16,7 @@ sudo wget -nc -P /usr/share/fonts \
 fc-list | grep -q "MesloLGS NF" || fc-cache -f -v
 
 # install oh-my-zsh
+export RUNZSH=no
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 # install powerlevel10k
