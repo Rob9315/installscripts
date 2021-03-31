@@ -13,4 +13,4 @@ alias config='/usr/bin/git --git-dir=$HOME/.cfg/.git --work-tree=$HOME'
 config pull -f
 [ -e ~/.zshrc ] && grep -q "source ~/.zsh/aliases" ~/.zshrc || echo "source ~/.zsh/aliases" >> ~/.zshrc
 config config --local status.showUntrackedFiles no
-config checkout
+config checkout -f
