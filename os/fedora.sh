@@ -29,7 +29,7 @@ sudo dnf check-update -y
 # install stuff
 sudo dnf install gnome-tweaks gnome-extensions-app code-insiders go npm brave-browser lpf-spotify-client discord papirus-icon-theme sassc zsh gawk youtube-dl flameshot gnome-shell-extension-appindicator gnome-shell-extension-caffeine -y
 # uninstall stuff
-sudo dnf remove gnome-shell-extension-background-logo
+sudo dnf remove gnome-shell-extension-background-logo -y
 
 # launch other scripts
 # sh -c "$(curl -s "$tmppath/software.sh")"
