@@ -19,5 +19,5 @@ fc-list | grep -q "MesloLGS NF" || fc-cache -f -v
 [ -e ~/.zshrc ] || touch ~/.zshrc
 
 # install powerlevel10k
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k || git -C ~/powerlevel10k pull -f
-grep -q 'source ~/powerlevel10k/powerlevel10k.zsh-theme' ~/.zshrc || echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/.powerlevel10k || git -C ~/.powerlevel10k pull -f
+grep -q 'source ~/.powerlevel10k/powerlevel10k.zsh-theme' ~/.zshrc || echo 'source ~/.powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
