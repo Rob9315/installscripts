@@ -8,7 +8,7 @@ cd $tmppath/spotify-adblock-linux
 
 #wget new release, untar it
 echo -e "wget-ing cef.tar.bz2" && wget -nc -O cef.tar.bz2 https://cef-builds.spotifycdn.com/cef_binary_88.1.6%2Bg4fe33a1%2Bchromium-88.0.4324.96_linux64_minimal.tar.bz2
-[ -e $tmppath/spotify-adblock-linux/include ] && echo -e "cef.tar.bz2 was already un-tar-ed, if adblock doesn't work, delete '$tmppath' and try again" || echo -e "un-tar-ing cef.tar.bz2" && tar -xf cef.tar.bz2 --wildcards '*include' --strip-components=1
+[ -e $tmppath/spotify-adblock-linux/include ] && echo -e "cef.tar.bz2 was already un-tar-ed, if adblock doesn't work, delete '$tmppath' and try again" || echo -e "un-tar-ing cef.tar.bz2" || tar -xf cef.tar.bz2 --wildcards '*include' --strip-components=1
 
 #install
 echo -e "installing spotify-adblock"
