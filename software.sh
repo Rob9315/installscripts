@@ -4,7 +4,7 @@
 
 promptyn() {
     clear && [ -z "${!1}" ] && read -n 1 -p "Do you want to install '$2'?$4 (y|N)"$'\n'"> " yn && echo "$yn" | grep -q "[Yy]" && export $1=$? && echo -e ""
-    [ ${!1} -eq 0 ] && sh -c "$3"
+    [ ${!1} = "0" ] && sh -c "$3"
 }
 
 [ -z "$tmppath" ] && eval "$(curl -s "https://raw.githubusercontent.com/Rob9315/installscripts/master/setdefaults.sh")"
