@@ -4,3 +4,4 @@ export termfont="MeslogLGS NF"
 export gtktheme=0
 export git=0
 export gsettings=0
+export dotfiles=0
