@@ -15,9 +15,11 @@ sudo wget -nc -P /usr/share/fonts \
 # reload font cache if not already exists
 fc-list | grep -q "MesloLGS NF" || fc-cache -f -v
 
-# create ~/.zshrc if it doesn't already exist
-[ -e ~/.zshrc ] || touch ~/.zshrc
+# install oh-my-zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 # install powerlevel10k
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/.powerlevel10k || git -C ~/.powerlevel10k pull -f
-grep -q 'source ~/.powerlevel10k/powerlevel10k.zsh-theme' ~/.zshrc || echo 'source ~/.powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k || git -C ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k pull -f
+
+# set powerlevel10k as oh-my-zsh theme
+sed -E -i 's+ZSH_THEME=".*"+ZSH_THEME="powerlevel10k/powerlevel10k"+g' ~/.zshrc
