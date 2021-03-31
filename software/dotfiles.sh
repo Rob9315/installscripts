@@ -10,6 +10,6 @@ grep .cfg .gitignore || echo ".cfg" >> .gitignore
 
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/.git --work-tree=$HOME'
 git clone 'https://github.com/rob9315/dotfiles' $HOME/.cfg || config pull -f
-[ -e ~/.zshrc ] && echo "alias config='/usr/bin/git --git-dir=/home/\$USER/.cfg/.git/ --work-tree=/home/\$USER'" >> ~/.zshrc
+[ -e ~/.zshrc ] && grep -q "source ~/.zsh/aliases" || echo "source ~/.zsh/aliases" >> ~/.zshrc
 config config --local status.showUntrackedFiles no
 config checkout
