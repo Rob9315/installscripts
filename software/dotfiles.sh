@@ -6,7 +6,7 @@
 # this uses MY dotfiles. they might not be your preference
 
 # add .cfg to .gitignore
-grep .cfg .gitignore || echo ".cfg" >> .gitignore
+grep -q "\.cfg" .gitignore || echo ".cfg" >> .gitignore
 
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/.git --work-tree=$HOME'
 git clone 'https://github.com/rob9315/dotfiles' $HOME/.cfg || config pull -f
