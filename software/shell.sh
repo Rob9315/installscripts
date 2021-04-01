@@ -10,7 +10,8 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" \
 fi \
 ' 
-powlvl10kpostzshrctext="# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.\n[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh"
+powlvl10kpostzshrctext='# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.\
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh'
 
 # change default shell
 sudo chsh --shell /bin/zsh $USER
