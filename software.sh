@@ -15,3 +15,5 @@ promptyn "shell" "Shell" "$(curl -s "$rawfilesurl/software/shell.sh")"
 promptyn "dotfiles" "rob9315's dotfiles" "$(curl -s "$rawfilesurl/software/dotfiles.sh")"
 promptyn "gsettings" "Patch some Gnome settings" "$(curl -s "$rawfilesurl/software/gsettings-patches.sh")"
 promptyn "gtktheme" "Matcherial Theme" "$(curl -s "$rawfilesurl/software/gtktheme.sh")" " (you will need to have sassc installed)"
+
+echo -e "If something looks weird, be sure to log out and back in to reload some stuff"
