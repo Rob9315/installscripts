@@ -12,10 +12,6 @@ promptyn() {
 promptyn "spotify" "Spotify (adblock)" "$(curl -s "$rawfilesurl/software/spotify.sh")"
 promptyn "shell" "Shell" "$(curl -s "$rawfilesurl/software/shell.sh")"
 [ "$shell" = "0" ] && export termfont='MesloLGS NF'
-[ "$shell" = "0" ] && echo -e "yes" || echo -e "no"
-echo -e "termfont: '$termfont'"
-read -n 1
 promptyn "dotfiles" "rob9315's dotfiles" "$(curl -s "$rawfilesurl/software/dotfiles.sh")"
 promptyn "gsettings" "Patch some Gnome settings" "$(curl -s "$rawfilesurl/software/gsettings-patches.sh")"
 promptyn "gtktheme" "Matcherial Theme" "$(curl -s "$rawfilesurl/software/gtktheme.sh")" " (you will need to have sassc installed)"
-
