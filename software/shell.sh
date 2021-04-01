@@ -32,9 +32,9 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 # install powerlevel10k
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k || git -C ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k pull -f
 # add default powerlevel10k text in front of .zshrc
-grep -q $powlvl10kprezshrctext ~/.zshrc || sed -i "1s+^+$powlvl10kprezshrctext\n+" ~/.zshrc
+grep -Fq "'"$powlvl10kprezshrctext"'" ~/.zshrc || sed -i "1s+^+$powlvl10kprezshrctext\n+" ~/.zshrc
 # add default powerlevel10k text in the end of .zshrc
-grep -q $powlvl10kpostzshrctext ~/.zshrc || echo $powlvl10kpostzshrctext >> ~/.zshrc
+grep -Fq "'"$powlvl10kpostzshrctext"'" ~/.zshrc || echo $powlvl10kpostzshrctext >> ~/.zshrc
 
 # set powerlevel10k as oh-my-zsh theme
 sed -E -i 's+ZSH_THEME=".*"+ZSH_THEME="powerlevel10k/powerlevel10k"+g' ~/.zshrc
