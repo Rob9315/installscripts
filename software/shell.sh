@@ -10,9 +10,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" \
 fi \
 ' 
-powlvl10kpostzshrctext='# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh. \
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh \
-'
+powlvl10kpostzshrctext="# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.\n[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh"
 
 # change default shell
 sudo chsh --shell /bin/zsh $USER
@@ -36,7 +34,7 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$
 # add default powerlevel10k text in front of .zshrc
 grep -Fq "'"$powlvl10kprezshrctext"'" ~/.zshrc || sed -i "1s@^@$powlvl10kprezshrctext@g" ~/.zshrc
 # add default powerlevel10k text in the end of .zshrc
-grep -Fq "'"$powlvl10kpostzshrctext"'" ~/.zshrc || echo $powlvl10kpostzshrctext >> ~/.zshrc
+grep -Fq "'"$powlvl10kpostzshrctext"'" ~/.zshrc || echo "$powlvl10kpostzshrctext" >> ~/.zshrc
 
 # set powerlevel10k as oh-my-zsh theme
 sed -E -i 's+ZSH_THEME=".*"+ZSH_THEME="powerlevel10k/powerlevel10k"+g' ~/.zshrc
