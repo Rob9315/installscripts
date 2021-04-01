@@ -27,7 +27,7 @@ sudo sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.m
 sudo dnf check-update -y
 
 # install stuff
-sudo dnf install gnome-tweaks gnome-extensions-app code-insiders go npm brave-browser lpf-spotify-client discord papirus-icon-theme sassc zsh gawk youtube-dl flameshot gnome-shell-extension-appindicator gnome-shell-extension-caffeine tldr wine.i686 -y
+sudo dnf install gnome-tweaks gnome-extensions-app code-insiders go npm brave-browser lpf-spotify-client discord papirus-icon-theme sassc zsh gawk youtube-dl flameshot gnome-shell-extension-appindicator gnome-shell-extension-caffeine tldr wine.i686 util-linux-user -y
 # uninstall stuff
 sudo dnf remove gnome-shell-extension-background-logo -y
 
