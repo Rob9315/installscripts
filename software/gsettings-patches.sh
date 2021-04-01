@@ -3,7 +3,6 @@
 [ -z "$tmppath" ] && eval "$(curl -s "https://raw.githubusercontent.com/Rob9315/installscripts/master/setdefaults.sh")"
 
 # set terminal font if not already set
-echo "$termfont FUCK" && read -n 1
 [ -z "$termfont" ] && read -p "Please input your preferred Terminal Font (when in doubt, pick Monospace)"$'\n'"> " termfont
 
 # get active profile id
