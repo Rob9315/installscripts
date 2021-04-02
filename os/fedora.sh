@@ -27,7 +27,7 @@ sudo sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.m
 sudo dnf check-update -y
 
 # install stuff
-sudo dnf install gnome-tweaks gnome-extensions-app code-insiders go npm brave-browser lpf-spotify-client discord papirus-icon-theme sassc zsh gawk youtube-dl flameshot gnome-shell-extension-appindicator gnome-shell-extension-caffeine tldr wine.i686 util-linux-user https://negativo17.org/repos/uld/fedora-33/x86_64/uld-1.00.39-1.fc33.x86_64.rpm -y
+sudo dnf install gnome-tweaks gnome-extensions-app code-insiders go npm brave-browser lpf-spotify-client discord papirus-icon-theme sassc zsh gawk youtube-dl flameshot gnome-shell-extension-appindicator gnome-shell-extension-caffeine tldr wine.i686 util-linux-user libappindicator libappindicator-gtk3 https://negativo17.org/repos/uld/fedora-33/x86_64/uld-1.00.39-1.fc33.x86_64.rpm -y
 # uninstall stuff
 sudo dnf remove gnome-shell-extension-background-logo -y
 
